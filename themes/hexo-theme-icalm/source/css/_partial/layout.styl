@@ -4,13 +4,25 @@ $link_color_h = rgb(14, 14, 14)
 $text-color = rgb(74, 74, 74)
 $text-muted-color = rgb(204, 204, 204)
 
+@font-face {
+  font-family: PuHuiTi;
+  src: url('../../assets/Alibaba_PuHuiTi_2.0_55_Regular_85_Bold.ttf');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: MapleMono;
+  src: url('../../assets/MapleMono-Regular.ttf');
+  font-weight: normal;
+}
+
 fill-full(l, r)
     position: absolute
     left: l
     right: r
 
 body
-    font-family: "Source Han Serif", "PingFang SC", "Microsoft YaHei", sans-serif
+    font-family: PuHuiTi, "Source Han Serif", "PingFang SC", "Microsoft YaHei", sans-serif
     // font-weight: 300
     line-height: 1.7em
     color: $text-color
@@ -34,15 +46,15 @@ figure.highlight
     width: 100%
 
 figure.highlight, .code, code
-    font-family: Monaco, Menlo, Consolas, 'Microsoft Yahei', monospace
-    font-size: 13px
+    font-family: MapleMono, Monaco, Menlo, Consolas, 'Microsoft Yahei', monospace
+    font-size: 14px
     margin: auto 5px
     pre
         // width: 90%
         margin: auto
         overflow-x: auto
         font-family: inherit
-        font-size: 13px
+        font-size: 14px
         line-height: 1.6em
 
 img
