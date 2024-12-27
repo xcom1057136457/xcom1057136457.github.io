@@ -8,7 +8,7 @@ HTML5不是什么新鲜事。自初始版本（2008 年 1 月）以来，我们�
 
 
 
-# 🍖 一、详情标签
+## 🍖 一、详情标签
 
 该`<details>`标签向用户提供按需详细信息。如果您需要按需向用户显示内容，请使用此标签。默认情况下，小部件是关闭的。打开时，它会展开并显示其中的内容。
 
@@ -16,7 +16,7 @@ HTML5不是什么新鲜事。自初始版本（2008 年 1 月）以来，我们�
 
 **代码**
 
-``` html
+```html
 <details>
     <summary>Click Here to get the user details</summary>
     <table>
@@ -56,19 +56,19 @@ HTML5不是什么新鲜事。自初始版本（2008 年 1 月）以来，我们�
 
 **看看它如何工作**
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/dd422b1856684055899b77d50233f055~tplv-k3u1fbpfcp-zoom-1.image)
+![](https://raw.githubusercontent.com/xcom1057136457/DrawingBed/main/dd422b1856684055899b77d50233f055%7Etplv-k3u1fbpfcp-zoom-1.image)
 
 
 
-# 🎶 二、内容可编辑
+## 🎶 二、内容可编辑
 
 contenteditable是可以在元素上设置以使内容可编辑的属性。它适用于 DIV、P、UL 等元素。您必须指定它，例如，`<element contenteditable="true|false">`。
 
-**==注意==: 当contenteditable元素上没有设置属性时，它将从其父元素继承。**
+**注意: 当contenteditable元素上没有设置属性时，它将从其父元素继承。**
 
 **代码**
 
-``` html
+```html
 <h2> Shoppping List(Content Editable) </h2>
  <ul class="content-editable" contenteditable="true">
      <li> 1. Milk </li>
@@ -79,15 +79,15 @@ contenteditable是可以在元素上设置以使内容可编辑的属性。它�
 
 **看看它如何工作**
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/13d54103f89d427e819b1b0a6f32a2b7~tplv-k3u1fbpfcp-zoom-1.image)
+![](https://raw.githubusercontent.com/xcom1057136457/DrawingBed/main/13d54103f89d427e819b1b0a6f32a2b7%7Etplv-k3u1fbpfcp-zoom-1.image)
 
-==**快速提示**==
+**快速提示**
 
 **span 或 div 元素可以使用它进行编辑，您可以使用 CSS 样式向其中添加任何丰富的内容。这将比使用输入字段处理它要好得多。去试一试！**
 
 
 
-# ✨ 三、地图
+## ✨ 三、地图
 
 该`<map>`标签有助于定义图像映射。图像映射是其中包含一个或多个可点击区域的图像。地图标签带有一个`<area>`标签来确定可点击区域。可点击区域可以是这些形状、矩形、圆形或多边形区域之一。如果您不指定任何形状，它会考虑整个图像。
 
@@ -109,15 +109,15 @@ contenteditable是可以在元素上设置以使内容可编辑的属性。它�
 
 **看看它如何工作**
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ebeb350635874d75a7f4ebf15e0db9c3~tplv-k3u1fbpfcp-watermark.image)
+![](https://raw.githubusercontent.com/xcom1057136457/DrawingBed/main/ebeb350635874d75a7f4ebf15e0db9c3%7Etplv-k3u1fbpfcp-watermark.image)
 
-==**快速提示**==
+**快速提示**
 
 **图像地图有其自身的缺点，但您可以将其用于视觉演示。试试看一张全家福怎么样，然后深入到个人的照片（可以是我们一直珍视的旧照片！）。**
 
 
 
-# 🏀 四、标记内容
+## 🏀 四、标记内容
 
 使用`<mark>`标签突出显示任何文本内容。
 
@@ -127,22 +127,20 @@ contenteditable是可以在元素上设置以使内容可编辑的属性。它�
 
 **看看它如何工作**
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/19b62d9d581645f9a778c3c80dd86131~tplv-k3u1fbpfcp-zoom-1.image)
+![](https://raw.githubusercontent.com/xcom1057136457/DrawingBed/main/19b62d9d581645f9a778c3c80dd86131%7Etplv-k3u1fbpfcp-zoom-1.image)
 
-==**快速提示**==
+**快速提示**
 
 **您可以随时使用 css 更改高亮颜色**
 
-``` css
+```css
 mark {
   background-color: green;
   color: #FFFFFF;
 }
 ```
 
-
-
-# 🎥 五、data-* 属性
+## 🎥 五、data-* 属性
 
 这些`data-*`属性用于存储页面或应用程序私有的自定义数据。存储的数据可用于 JavaScript 代码以创建进一步的用户体验。
 
@@ -179,15 +177,13 @@ function reveal() {
 
 **看看它如何工作**
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a319e3c2d5174b079b519fca8d590559~tplv-k3u1fbpfcp-zoom-1.image)
+![](https://raw.githubusercontent.com/xcom1057136457/DrawingBed/main/a319e3c2d5174b079b519fca8d590559%7Etplv-k3u1fbpfcp-zoom-1.image)
 
-==**快速提示**==
+**快速提示**
 
 **您可以使用它在页面上存储一些数据，然后使用 REST 调用将其传递给服务器。**
 
-
-
-# 🏆 六、输出标签
+## 🏆 六、输出标签
 
 `<output>`标签表示的运算的结果。通常，此元素定义将用于显示某些计算的文本输出的区域。
 
@@ -203,15 +199,13 @@ function reveal() {
 
 **看看它如何工作**
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/216d619a8e0b4052ab55089ac531820d~tplv-k3u1fbpfcp-zoom-1.image)
+![](https://raw.githubusercontent.com/xcom1057136457/DrawingBed/main/216d619a8e0b4052ab55089ac531820d%7Etplv-k3u1fbpfcp-zoom-1.image)
 
-==**快速提示**==
+**快速提示**
 
 **如果您在客户端 JavaScript 中执行任何计算，并且希望结果反映在页面上，请使用`<output>`标记。您不必执行使用 获取元素的额外步骤getElementById()。**
 
-
-
-# 🎻 七、数据列表
+## 🎻 七、数据列表
 
 `<datalist>`标签指定了一个预定义选项列表，并允许用户向其中添加更多选项。它提供了一项autocomplete功能，允许您通过预先输入获得所需的选项。
 
@@ -234,15 +228,13 @@ function reveal() {
 
 **看看它如何工作**
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d250285d3dcb49c5be476f4e50f94562~tplv-k3u1fbpfcp-zoom-1.image)
+![](https://raw.githubusercontent.com/xcom1057136457/DrawingBed/main/d250285d3dcb49c5be476f4e50f94562%7Etplv-k3u1fbpfcp-zoom-1.image)
 
-==**快速提示**==
+**快速提示**
 
 **它与传统`<select>-<option>`标签有何不同？选择标签用于从您需要浏览列表的选项中选择一项或多项。Datalist是具有自动完成支持的高级功能。**
 
-
-
-# 🧿 八、范围（滑块）
+## 🧿 八、范围（滑块）
 
 `range`是给定滑块类型范围选择器的输入类型。
 
@@ -266,15 +258,13 @@ function reveal() {
 
 **看看它如何工作**
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ff9208cca3a3482e919c613d5af20fb4~tplv-k3u1fbpfcp-zoom-1.image)
+![](https://raw.githubusercontent.com/xcom1057136457/DrawingBed/main/ff9208cca3a3482e919c613d5af20fb4%7Etplv-k3u1fbpfcp-zoom-1.image)
 
-==**快速提示**==
+**快速提示**
 
 **HTML5 中没有叫slider的！**
 
-
-
-# ⏰ 九、Meter
+## ⏰ 九、Meter
 
 使用`<meter>`标签测量给定范围内的数据。
 
@@ -290,9 +280,9 @@ function reveal() {
 
 **看看它如何工作**
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e84130686b964b10ad20d737424b1e2e~tplv-k3u1fbpfcp-zoom-1.image)
+![](https://raw.githubusercontent.com/xcom1057136457/DrawingBed/main/e84130686b964b10ad20d737424b1e2e%7Etplv-k3u1fbpfcp-zoom-1.image)
 
-==**快速提示**==
+**快速提示**
 
 **不要将`<meter>`标签用于进度指示器类型的用户体验。我们有来自 HTML5的`<Progress>`标签。**
 
@@ -301,11 +291,9 @@ function reveal() {
 <progress id="file" value="32" max="100"> 32% </progress>
 ```
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a7adeb88e92e41a488c662e34d858f8e~tplv-k3u1fbpfcp-zoom-1.image)
+![](https://raw.githubusercontent.com/xcom1057136457/DrawingBed/main/a7adeb88e92e41a488c662e34d858f8e%7Etplv-k3u1fbpfcp-zoom-1.image)
 
-
-
-# 💌 十、Inputs
+## 💌 十、Inputs
 
 这部分是我们最熟悉的输入类型的用法，如文本、密码等。输入类型的特殊用法很少
 
@@ -317,7 +305,7 @@ function reveal() {
 <input type="text" id="username1" name="username" required>
 ```
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/522023617b7f4171ab20774ae214dc42~tplv-k3u1fbpfcp-zoom-1.image)
+![](https://raw.githubusercontent.com/xcom1057136457/DrawingBed/main/522023617b7f4171ab20774ae214dc42%7Etplv-k3u1fbpfcp-zoom-1.image)
 
 自动对焦 通过将光标放在输入元素上自动提供焦点。
 
@@ -342,5 +330,5 @@ function reveal() {
 <p id="colorMe">Color Me!</p>
 ```
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0e0d39d4f37e4440993c4f9610932145~tplv-k3u1fbpfcp-zoom-1.image)
+![](https://raw.githubusercontent.com/xcom1057136457/DrawingBed/main/0e0d39d4f37e4440993c4f9610932145%7Etplv-k3u1fbpfcp-zoom-1.image)
 

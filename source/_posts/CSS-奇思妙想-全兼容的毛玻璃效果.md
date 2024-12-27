@@ -38,7 +38,7 @@ date: 2024-08-29 16:49:21
 }
 ```
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d00cd727243b46779a25275a265d3e8d~tplv-k3u1fbpfcp-zoom-1.image)
+![](https://raw.githubusercontent.com/xcom1057136457/DrawingBed/main/20241227145236.png)
 
 [CodePen Demo -- filter 与 backdrop-filter 对比](https://codepen.io/Chokcoco/pen/WNjebrr)
 
@@ -52,7 +52,7 @@ date: 2024-08-29 16:49:21
 
 `backdrop-filter` 其实已经诞生挺久了，然而，firefox 至今都不兼容它！
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3844c5f068fb498e84759db843394e64~tplv-k3u1fbpfcp-zoom-1.image)
+![](https://raw.githubusercontent.com/xcom1057136457/DrawingBed/main/3844c5f068fb498e84759db843394e64%7Etplv-k3u1fbpfcp-zoom-1.image)
 
 对于部分已经放弃了 IE 的 PC 端业务而言，firefox 还是需要兼容的，想要让使用 `backdrop-filter` 实现毛玻璃效果应用落地，firefox 的兼容问题必须得解决。
 
@@ -64,7 +64,7 @@ OK，本文的重点就是在于如何在 firefox 中，不使用 `backdrop-filt
 
 首先看一下，如果是正常使用 `backdrop-filter`，还是上述的例子效果如下，是没有毛玻璃效果的：
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6c3cf43d22c54ed6bd8f30c463723165~tplv-k3u1fbpfcp-zoom-1.image)
+![](https://raw.githubusercontent.com/xcom1057136457/DrawingBed/main/6c3cf43d22c54ed6bd8f30c463723165%7Etplv-k3u1fbpfcp-zoom-1.image)
 
 ### 使用 background-attachment: fixed 兼容静态背景图
 
@@ -117,7 +117,7 @@ body {
 
 效果如下：
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f515dbca75754973807a2f0e07b26e2e~tplv-k3u1fbpfcp-zoom-1.image)
+![](https://raw.githubusercontent.com/xcom1057136457/DrawingBed/main/f515dbca75754973807a2f0e07b26e2e%7Etplv-k3u1fbpfcp-zoom-1.image)
 
 此方法也是在没有 `backdrop-filter` 之前，在各个浏览器想实现简单毛玻璃效果最常用的方法之一。
 
@@ -129,13 +129,13 @@ body {
 
 1. 由于使用了伪元素叠加了一层背景，因为层级关系，父元素的 background 是在最下层的，所以元素本身的背景色其实并没有被充分体现，可以对比下两种方法的实际效果图：
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/bd5d549e72254958810f2559ef61e648~tplv-k3u1fbpfcp-zoom-1.image)
+![](https://raw.githubusercontent.com/xcom1057136457/DrawingBed/main/bd5d549e72254958810f2559ef61e648%7Etplv-k3u1fbpfcp-zoom-1.image)
 
 解决方案是再通过另外一个伪元素再叠加一层背景色，这个背景色应该是原本赋值给父元素本身的。
 
 叠加之后的效果如下：
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ff360c5bd02b4a4fbd72977d73710a5d~tplv-k3u1fbpfcp-zoom-1.image)
+![](https://raw.githubusercontent.com/xcom1057136457/DrawingBed/main/ff360c5bd02b4a4fbd72977d73710a5d%7Etplv-k3u1fbpfcp-zoom-1.image)
 
 [CodePen Demo -- 使用 background-attachment: fixed | filter: bulr() 实现毛玻璃效果优化](https://codepen.io/Chokcoco/pen/abWbzKG)
 
@@ -170,7 +170,7 @@ body {
 
 它其实是个草案规范，但是一直以来，只有 Firefox 支持它 -- [CAN I USE -- CSS element()](https://caniuse.com/css-element-function)：
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4204c0fee5c24d769c395ab449f24908~tplv-k3u1fbpfcp-zoom-1.image)
+![](https://raw.githubusercontent.com/xcom1057136457/DrawingBed/main/4204c0fee5c24d769c395ab449f24908%7Etplv-k3u1fbpfcp-zoom-1.image)
 
 它有什么作用呢？
 
@@ -220,7 +220,7 @@ p {
 
 它的效果大概是这样：
 
-![](https://user-images.githubusercontent.com/8554143/123617162-8d486700-d839-11eb-9b0c-f090cbc52abd.gif)
+![](https://raw.githubusercontent.com/xcom1057136457/DrawingBed/main/123617162-8d486700-d839-11eb-9b0c-f090cbc52abd.gif)
 
 我们就假设这个结构就是我们页面某一块的内容，然后，我们就可以使用 `background: -moz-element(#id)` 这种方式，将这个元素内绘制的 UI 内容完全拷贝至另外一个元素，看看效果。
 
@@ -245,7 +245,7 @@ p {
 
 它可以完全复制另外一个元素内绘制出来的 UI，并且能追踪实时变化：
 
-![](https://user-images.githubusercontent.com/8554143/123618303-a69de300-d83a-11eb-9ddd-4b6b929fcdac.gif)
+![](https://raw.githubusercontent.com/xcom1057136457/DrawingBed/main/123618303-a69de300-d83a-11eb-9ddd-4b6b929fcdac.gif)
 
 [CodePen Demo -- -moz-element Demo(Firefox Only)](https://codepen.io/Chokcoco/pen/jOmOPPL)
 
@@ -333,7 +333,7 @@ $(function() {
 
 OK，至此，我们就能完美的在 Firefox 上也实现毛玻璃的效果了：
 
-![](https://user-images.githubusercontent.com/8554143/123645631-14f19e00-d859-11eb-9aaa-3b0032da89e0.gif)
+![](https://raw.githubusercontent.com/xcom1057136457/DrawingBed/main/123645631-14f19e00-d859-11eb-9aaa-3b0032da89e0.gif)
 
 它相对于上面的第一种方案而言，最大的不同之处在于，它可以模拟各式各样的背景元素，背景元素可以不仅仅只是一张图片！它可以是各种复杂的结构！
 

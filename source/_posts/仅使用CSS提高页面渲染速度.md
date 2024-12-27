@@ -8,7 +8,7 @@ date: 2021-04-10 12:03:25
 
 一般来说，大多数Web应用都有复杂的UI元素，而且有的内容会在设备可视区域之外（内容超出了用户浏览器可视区域），比如下图中红色区域就在手机设备屏幕可视区域之外：
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f7ff80b025bb4b5ba3ee8fa8f365b37c~tplv-k3u1fbpfcp-zoom-1.image)
+![](https://raw.githubusercontent.com/xcom1057136457/DrawingBed/main/f7ff80b025bb4b5ba3ee8fa8f365b37c%7Etplv-k3u1fbpfcp-zoom-1.image)
 
 在这种场合下，我们可以使用CSS的`content-visibility`来跳过屏幕外的内容渲染。也就是说，如果你有大量的离屏内容（Off-screen Content），这将会大幅减少页面渲染时间。
 
@@ -16,7 +16,7 @@ date: 2021-04-10 12:03:25
 
 假设我们有一个像下面的页面，整个页面有个卡片列表，大约有`375`张，大约在屏幕可视区域能显示`12`张卡片。正如下图所示，渲染这个页面浏览器用时大约`1037ms`：
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e32f2b9a189d48f093ddc30b57cc8d32~tplv-k3u1fbpfcp-zoom-1.image)
+![](https://raw.githubusercontent.com/xcom1057136457/DrawingBed/main/e32f2b9a189d48f093ddc30b57cc8d32%7Etplv-k3u1fbpfcp-zoom-1.image)
 
 你可以给所有卡片添加`content-visibility`：
 
@@ -28,7 +28,7 @@ date: 2021-04-10 12:03:25
 
 所有卡片加入`content-visibility`样式之后，页面的渲染时间下降到`150ms`，差不多提高了六倍的渲染性能：
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/bdef585a84594ec69796c5d733d58500~tplv-k3u1fbpfcp-zoom-1.image)
+![](https://raw.githubusercontent.com/xcom1057136457/DrawingBed/main/bdef585a84594ec69796c5d733d58500%7Etplv-k3u1fbpfcp-zoom-1.image)
 
 正如你所看到的，`content-visibility`非常强大，提高页面渲染非常有用。换然话说，有了CSS的`content-visibility`属性，影响浏览器的渲染过程就变得更加容易。本质上，这个属性 **改变了一个元素的可见性，并管理其渲染状态**。
 
@@ -51,7 +51,7 @@ date: 2021-04-10 12:03:25
 
 `content-visibility`提供的另外两个值`visible`和`hidden`可以让我们实现像元素的显式和隐藏，类似于`display`的`none`和非`none`值的切换：
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/094d996900da45258b2d5d287b64a51b~tplv-k3u1fbpfcp-zoom-1.image)
+![](https://raw.githubusercontent.com/xcom1057136457/DrawingBed/main/094d996900da45258b2d5d287b64a51b%7Etplv-k3u1fbpfcp-zoom-1.image)
 
 在这种情况下，`content-visibility`可以提高频繁显示或隐藏的元素的渲染性能，例如模态框的显示和隐藏。`content-visibility`可以提供这种性能提升，这要归功于其隐藏值（`hidden`）的功能与其他值的不同：
 
@@ -90,7 +90,7 @@ date: 2021-04-10 12:03:25
 
 > 根据 [@Maximillian Laumeister](https://www.maxlaumeister.com/articles/css-will-change-property-a-performance-case-study/) 所做的性能基准，可以看到，他通过这种单行变化获得了超过`120FPS`的渲染速度，和最初的渲染速度（大约`50FPS`）相比，提高`70FPS`左右。
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b0af9656ce0d4bf99d4e53b17852f022~tplv-k3u1fbpfcp-zoom-1.image)
+![](https://raw.githubusercontent.com/xcom1057136457/DrawingBed/main/b0af9656ce0d4bf99d4e53b17852f022%7Etplv-k3u1fbpfcp-zoom-1.image)
 
 `will-change`的使用并不复杂，它能接受的值有：
 
@@ -162,8 +162,6 @@ function removeHint() {
 - 不要同时声明太多的属性
 - 不要应用在太多元素上
 - 不要把资源浪费在已停止变化的元素上
-
-
 
 ## 让元素及其内容尽可能独立于文档树的其余部分（contain）
 
@@ -241,11 +239,11 @@ function setup() {
 
 如果不使用`contain`，即使更改是在单个元素上，浏览器在布局上的渲染也会花费大量的时间，因为它会遍历整个DOM树（在本例中，DOM树很大，因为它有`10000`个DOM元素）：
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8dd837225d5b46a996301e0ab9c36071~tplv-k3u1fbpfcp-zoom-1.image)
+![](https://raw.githubusercontent.com/xcom1057136457/DrawingBed/main/8dd837225d5b46a996301e0ab9c36071%7Etplv-k3u1fbpfcp-zoom-1.image)
 
 在本例中，`div`的大小是固定的，我们在内部`div`中更改的内容不会溢出它。因此，我们可以将`contain: strict`应用到项目上，这样当项目内部发生变化时，浏览器就不需要访问其他节点，它可以停止检查该元素上的内容，并避免到外部去。
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/04936a6174c84ffa9b97d6dc568366b6~tplv-k3u1fbpfcp-zoom-1.image)
+![](https://raw.githubusercontent.com/xcom1057136457/DrawingBed/main/04936a6174c84ffa9b97d6dc568366b6%7Etplv-k3u1fbpfcp-zoom-1.image)
 
 尽管这个例子中的每一项都很简单，但通过使用`contain`，Web性能得到很大的改变，从`~4ms`降到了`~0.04ms`，这是一个巨大的差异。想象一下，如果DOM树具有非常复杂的结构和内容，但只修改了页面的一小部分，如果可以将其与页面的其他部分隔离开来，那么将会发生什么情况呢？
 
@@ -255,15 +253,13 @@ function setup() {
 - [Helping Browsers Optimize With The CSS Contain Property](https://www.smashingmagazine.com/2019/12/browsers-containment-css-contain-property/)
 - [CSS `contain` Property](https://termvader.github.io/css-contain/)
 
-
-
 ## 使用font-display解决由于字体造成的布局偏移（FOUT）
 
 在Web开发的过程中，难免会使用`@font-face`技术引用一些特殊字体（系统没有的字体），同时也可能会配合变量字体特性，使用更具个性化的字体。
 
 使用`@font-face`加载字体策略大概如下图所示：
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/08409c6aae0148a8b3b5214e8e766e1d~tplv-k3u1fbpfcp-zoom-1.image)
+![](https://raw.githubusercontent.com/xcom1057136457/DrawingBed/main/08409c6aae0148a8b3b5214e8e766e1d%7Etplv-k3u1fbpfcp-zoom-1.image)
 
 上图来自于[@zachleat](https://twitter.com/zachleat)的《[A COMPREHENSIVE GUIDE TO FONT LOADING STRATEGIES](https://www.zachleat.com/web/comprehensive-webfonts/)》一文。
 
@@ -279,7 +275,7 @@ CSS的`font-display`属性有五个不同的值：
 - **`fallback`** ：这个可以说是`auto`和`swap`的一种折中方式。需要使用自定义字体渲染的文本会在较短的时间不可见，如果自定义字体还没有加载结束，那么就先加载无样式的文本。一旦自定义字体加载结束，那么文本就会被正确赋予样式。使用 `fallback`时，阻塞阶段时间将非常小（多数情况下推荐小于 `100ms`），交换阶段也比较短（多数情况下建议使用 `3s`）。换言之，如果字体没有加载，则首先会使用后备字体渲染。一旦加载成功，就会切换字体。但如果等待时间过久，则页面将一直使用后备字体。如果希望用户尽快开始阅读，而且不因新字体的载入导致文本样式发生变动而干扰用户体验，`fallback` 是一个很好的选择。
 - **`optional`** ：效果和`fallback`几乎一样，都是先在极短的时间内文本不可见，然后再加载无样式的文本。不过`optional`选项可以让浏览器自由决定是否使用自定义字体，而这个决定很大程度上取决于浏览器的连接速度。如果速度很慢，那你的自定义字体可能就不会被使用。使用 `optional` 时，阻塞阶段时间会非常小（多数情况下建议低于 `100ms`），交换阶段时间为 `0`。
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4166c647799943c4a9169db81ace759d~tplv-k3u1fbpfcp-zoom-1.image)
+![](https://raw.githubusercontent.com/xcom1057136457/DrawingBed/main/4166c647799943c4a9169db81ace759d%7Etplv-k3u1fbpfcp-zoom-1.image)
 
 下面是使用`swap`值的一个例子：
 
@@ -295,7 +291,7 @@ CSS的`font-display`属性有五个不同的值：
 
 在这个例子里我们通过只使用`WOFF2`文件来缩写字体。另外我们使用了`swap`作为`font-display`的值，页面的加载情况将如下图所示：
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/2a9442c1c9a6415e8e61192d0613e3d7~tplv-k3u1fbpfcp-zoom-1.image)
+![](https://raw.githubusercontent.com/xcom1057136457/DrawingBed/main/2a9442c1c9a6415e8e61192d0613e3d7%7Etplv-k3u1fbpfcp-zoom-1.image)
 
 > **注意，`font-display`一般放在`@font-face`规则中使用**。
 
@@ -309,8 +305,6 @@ CSS的`font-display`属性有五个不同的值：
 - [The importance of `@font-face` source order when used with preload](https://nooshu.github.io/blog/2021/01/23/the-importance-of-font-face-source-order-when-used-with-preload/)
 - [The Fastest Google Fonts](https://csswizardry.com/2020/05/the-fastest-google-fonts/)
 - [A COMPREHENSIVE GUIDE TO FONT LOADING STRATEGIES](https://www.zachleat.com/web/comprehensive-webfonts/)
-
-
 
 ## scroll-behavior让滚动更流畅
 
@@ -335,7 +329,7 @@ html {
 
 口说无凭，来看个效果对比，你会有更好的感觉：
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e963921433704c3386553e9e4d8c97e6~tplv-k3u1fbpfcp-zoom-1.image)
+![](https://raw.githubusercontent.com/xcom1057136457/DrawingBed/main/e963921433704c3386553e9e4d8c97e6%7Etplv-k3u1fbpfcp-zoom-1.image)
 
 有关于`scroll-behavior`属性更多的介绍可以再花点时间阅读下面这些文章：
 
@@ -345,13 +339,9 @@ html {
 - [PAGE SCROLLING IN VANILLA JAVASCRIPT](https://pawelgrzybek.com/page-scroll-in-vanilla-javascript/)
 - [smooth scroll behavior polyfill](https://iamdustan.com/smoothscroll/)
 
-
-
 ## 开启GPU渲染动画
 
 浏览器针对处理CSS动画和不会很好地触发重排（因此也导致绘）的动画属性进行了优化。为了提高性能，可以将被动画化的节点从主线程移到GPU上。将导致合成的属性包括 3D transforms (`transform: translateZ()`, `rotate3d()`，等)，`animating`， `transform` 和 `opacity`, `position: fixed`，`will-change`，和 `filter`。一些元素，例如 `<video>`, `<canvas>` 和 `<iframe>`，也位于各自的图层上。 将元素提升为图层（也称为合成）时，动画转换属性将在GPU中完成，从而改善性能，尤其是在移动设备上。
-
-
 
 ## 减少渲染阻止时间
 
@@ -363,7 +353,7 @@ html {
 <link rel="stylesheet" href="styles.css">
 ```
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8330734e4f4c4f6ebda8d80f0dd0f0c6~tplv-k3u1fbpfcp-zoom-1.image)
+![](https://raw.githubusercontent.com/xcom1057136457/DrawingBed/main/8330734e4f4c4f6ebda8d80f0dd0f0c6%7Etplv-k3u1fbpfcp-zoom-1.image)
 
 将其分解为多个样式表后：
 
@@ -379,11 +369,9 @@ html {
 <link rel="stylesheet" href="print.css" media="print" />
 ```
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3e1a7c958f564bf2970e20495e9ce539~tplv-k3u1fbpfcp-zoom-1.image)
+![](https://raw.githubusercontent.com/xcom1057136457/DrawingBed/main/3e1a7c958f564bf2970e20495e9ce539%7Etplv-k3u1fbpfcp-zoom-1.image)
 
 默认情况下，浏览器假设每个指定的样式表都是阻塞渲染的。通过添加 `media`属性附加媒体查询，告诉浏览器何时应用样式表。当浏览器看到一个它知道只会用于特定场景的样式表时，它仍会下载样式，但不会阻塞渲染。通过将 CSS 分成多个文件，主要的 阻塞渲染 文件（本例中为 `styles.css`）的大小变得更小，从而减少了渲染被阻塞的时间。
-
-
 
 ## 避免@import包含多个样式表
 
@@ -399,13 +387,11 @@ html {
 @import url("componenets.css");
 ```
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/597792ef5ff140f09057a041e714dc79~tplv-k3u1fbpfcp-zoom-1.image)
+![](https://raw.githubusercontent.com/xcom1057136457/DrawingBed/main/597792ef5ff140f09057a041e714dc79%7Etplv-k3u1fbpfcp-zoom-1.image)
 
 与使用 `@import` 相比，我们可以通过多个 `link` 来实现同样的功能，但性能要好得多，因为它允许我们并行加载样式表。
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ad86fb5764a249cabe15908fb0d46bb6~tplv-k3u1fbpfcp-zoom-1.image)
-
-
+![](https://raw.githubusercontent.com/xcom1057136457/DrawingBed/main/ad86fb5764a249cabe15908fb0d46bb6%7Etplv-k3u1fbpfcp-zoom-1.image)
 
 ## 注意动态修改自定义属性方式
 
@@ -435,8 +421,6 @@ button {
 - [Control CSS loading with custom properties](https://jakearchibald.com/2016/css-loading-with-custom-props/)
 - [CSS Custom Properties performance in 2018](https://blog.jiayihu.net/css-custom-properties-performance-in-2018/)
 - [Improving CSS Custom Properties performance](https://blogs.igalia.com/jfernandez/2020/08/13/improving-css-custom-properties-performance/)
-
-
 
 ## 小结
 

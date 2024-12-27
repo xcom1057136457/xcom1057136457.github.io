@@ -330,7 +330,7 @@ idbKeyval.set('add', '默认的数据')
 
 ```
 
-![截屏2022-11-06 下午8.40.58.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/02592f01a8cc45ea92ab65161da5f23d~tplv-k3u1fbpfcp-zoom-in-crop-mark:4536:0:0:0.awebp?)
+![截屏2022-11-06 下午8.40.58.png](https://raw.githubusercontent.com/xcom1057136457/DrawingBed/main/02592f01a8cc45ea92ab65161da5f23d%7Etplv-k3u1fbpfcp-zoom-in-crop-mark%3A4536%3A0%3A0%3A0.awebp)
 
 使用 `createStore` 创建的数据库一个库只会创建一个表即：
 

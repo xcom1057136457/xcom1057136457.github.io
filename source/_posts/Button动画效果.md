@@ -65,13 +65,13 @@ button:hover svg {
 
 **GIF**
 
-![Image](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ba88b49b984a48b2adc72db1b62049c7~tplv-k3u1fbpfcp-zoom-1.image)
+![Image](https://raw.githubusercontent.com/xcom1057136457/DrawingBed/main/ba88b49b984a48b2adc72db1b62049c7%7Etplv-k3u1fbpfcp-zoom-1.image)
 
 ### 2. 霓虹效果
 
 **HTML**
 
-```
+```html
 <div id="neon-btn">
   <button class="btn one">Hover me</button>
   <button  class="btn two">Hover me</button>
@@ -81,7 +81,7 @@ button:hover svg {
 
 **CSS**
 
-```
+```css
 #neon-btn {
   display: flex;
   align-items: center;
@@ -140,13 +140,13 @@ button:hover svg {
 
 **GIF**
 
-![Image](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/63bd83b42ff94b6a8d645a6d564c3ca8~tplv-k3u1fbpfcp-zoom-1.image)
+![Image](https://raw.githubusercontent.com/xcom1057136457/DrawingBed/main/63bd83b42ff94b6a8d645a6d564c3ca8%7Etplv-k3u1fbpfcp-zoom-1.image)
 
 ### 3. 边框效果
 
 **HTML**
 
-```
+```html
 <div id="draw-border">
   <button>Hover me</button>
 </div>
@@ -154,7 +154,7 @@ button:hover svg {
 
 **CSS**
 
-```
+```css
 #draw-border {
   display: flex;
   align-items: center;
@@ -213,13 +213,13 @@ button:hover::after {
 
 **GIF**
 
-![Image](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/295e3b962d9b4b08b34226604343d256~tplv-k3u1fbpfcp-zoom-1.image)
+![Image](https://raw.githubusercontent.com/xcom1057136457/DrawingBed/main/295e3b962d9b4b08b34226604343d256%7Etplv-k3u1fbpfcp-zoom-1.image)
 
 ### 4. 圆形效果
 
 **HTML**
 
-```
+```html
 <div id="circle-btn">
   <div class="btn-container">
     // 这里有一个svg元素
@@ -230,7 +230,7 @@ button:hover::after {
 
 **CSS**
 
-```
+```css
 #circle-btn { 
   display: flex;
   align-items: center;
@@ -269,13 +269,13 @@ button:hover {
 }
 ```
 
-![Image](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4719262123064ff683dfdff17555efde~tplv-k3u1fbpfcp-zoom-1.image)
+![Image](https://raw.githubusercontent.com/xcom1057136457/DrawingBed/main/4719262123064ff683dfdff17555efde%7Etplv-k3u1fbpfcp-zoom-1.image)
 
 ### 5. 圆角效果
 
 **HTML**
 
-```
+```html
 <div id="border-btn">
   <button>Hover me</button>
 </div>
@@ -283,7 +283,7 @@ button:hover {
 
 **CSS**
 
-```
+```css
 #border-btn { 
   display: flex;
   align-items: center;
@@ -314,13 +314,13 @@ button:hover {
 }
 ```
 
-![Image](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/514387debb8643a19bf3311bb1b735c1~tplv-k3u1fbpfcp-zoom-1.image)
+![Image](https://raw.githubusercontent.com/xcom1057136457/DrawingBed/main/514387debb8643a19bf3311bb1b735c1%7Etplv-k3u1fbpfcp-zoom-1.image)
 
 ### 6. 冰冻效果
 
 **HTML**
 
-```
+```html
 <div id="frozen-btn">
   <button class="green">Hover me</button>
   <button class="purple">Hover me</button>
@@ -329,7 +329,7 @@ button:hover {
 
 **CSS**
 
-```
+```css
 #frozen-btn {
   display: flex;
   align-items: center;
@@ -387,13 +387,13 @@ button:before{
 }
 ```
 
-![Image](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b8572b77cd25496d85655d4d6fb12a7d~tplv-k3u1fbpfcp-zoom-1.image)
+![Image](https://raw.githubusercontent.com/xcom1057136457/DrawingBed/main/b8572b77cd25496d85655d4d6fb12a7d%7Etplv-k3u1fbpfcp-zoom-1.image)
 
 ### 7. 闪亮效果
 
 **HTML**
 
-```
+```html
 <div id="shiny-shadow">
   <button><span>Hover me</span></button>
 </div>
@@ -401,7 +401,7 @@ button:before{
 
 **CSS**
 
-```
+```css
 #shiny-shadow {
   display: flex;
   align-items: center;
@@ -445,13 +445,13 @@ button:hover:after {
 }
 ```
 
-![Image](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e6e909e04d0a4b878ef48889fe147765~tplv-k3u1fbpfcp-zoom-1.image)
+![Image](https://raw.githubusercontent.com/xcom1057136457/DrawingBed/main/e6e909e04d0a4b878ef48889fe147765%7Etplv-k3u1fbpfcp-zoom-1.image)
 
 ### 8. 加载效果
 
 **HTML**
 
-```
+```html
 <div id="loading-btn">
   <button><span>Hover me</span></button>
 </div>
@@ -459,7 +459,7 @@ button:hover:after {
 
 **CSS**
 
-```
+```css
 #loading-btn {
   display: flex;
   align-items: center;
@@ -499,4 +499,4 @@ button:hover:before {
 }
 ```
 
-![Image](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/eee9698995b9441ba3fa622780e5cba8~tplv-k3u1fbpfcp-zoom-1.image)
+![Image](https://raw.githubusercontent.com/xcom1057136457/DrawingBed/main/eee9698995b9441ba3fa622780e5cba8%7Etplv-k3u1fbpfcp-zoom-1.image)

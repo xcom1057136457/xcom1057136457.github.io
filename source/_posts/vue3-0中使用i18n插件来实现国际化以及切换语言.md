@@ -4,7 +4,7 @@ date: 2024-12-26 14:18:21
 ---
 
 1. 下载il8n插件，目前通过`npm install vue-il8n`下载的il8n版本是无法支持vue3.0，因此要使用`npm install vue-i18n@next`来获取最新的版本，我这边是的版本是`^9.0.0-beta.17`
-```js
+``` shell
 npm install vue-i18n@next
 yarn add vue-i18n@next
 pnpm add vue-i18n@next(个人推荐)

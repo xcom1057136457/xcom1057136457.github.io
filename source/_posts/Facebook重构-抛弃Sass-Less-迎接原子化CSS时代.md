@@ -10,8 +10,6 @@ date: 2021-03-11 17:04:39
 
 先抛出一个令人开心的结论，新的 CSS 编写和构建方式让 Facebook 的主页**减少了 80% 的 CSS 体积**。
 
-
-
 ## 什么是原子 CSS？
 
 你可能听说过各种 CSS 方法，如 BEM, OOCSS…
@@ -71,8 +69,6 @@ CSS 权重也不是什么问题，因为我们使用的是最简单的类选择�
 
 一旦你的实用工具/原子 CSS 准备好了，它将不会有太大的变化或增长。可以更有效地缓存它(你可以将它附加到 vendor.css 中，重新部署的时候它也不会失效)。它还具有相当好的可移植性，可以在任意其他应用程序中使用。
 
-
-
 ## 实用工具/原子 CSS 的限制
 
 实用工具/原子 CSS 看起来很有趣，但它们也带来了一些挑战。
@@ -89,8 +85,6 @@ CSS 权重也不是什么问题，因为我们使用的是最简单的类选择�
 
 有时，你需要一些**额外的 CSS**，而实用工具/原子 CSS 并不提供这些 CSS。没有约定好的方法来提供这些一次性样式。
 
-
-
 ## Tailwind 赶来支援
 
 Tailwind 使用的方法是非常便捷的，并且解决了上述一些问题。
@@ -99,11 +93,11 @@ Tailwind 使用的方法是非常便捷的，并且解决了上述一些问题�
 
 传统卡片样式写法：
 
-![](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/04a75ec8a88d4586af9c59ce190a6293~tplv-k3u1fbpfcp-watermark.image)
+![](https://raw.githubusercontent.com/xcom1057136457/DrawingBed/main/04a75ec8a88d4586af9c59ce190a6293%7Etplv-k3u1fbpfcp-watermark.image)
 
 Tailwind 卡片样式写法：
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9dd33144e8d54c67b18ba15834e68ab1~tplv-k3u1fbpfcp-watermark.image)
+![](https://raw.githubusercontent.com/xcom1057136457/DrawingBed/main/9dd33144e8d54c67b18ba15834e68ab1%7Etplv-k3u1fbpfcp-watermark.image)
 
 它并不是真的为所有网站提供一些唯一的实用工具 CSS，取而代之的是，它提供了一些公用的命名约定。通过一个[配置文件](https://tailwindcss.com/docs/configuration)，你可以为你的网站生成一套**专属**的实用工具 CSS。
 
@@ -173,15 +167,13 @@ Tailwind 是一个优秀的解决方案，但仍然有一些问题没有解决:
 
 与 Tailwind 相比，手写原子 CSS 可能**不是最方便**的。
 
-
-
 ## 和 CSS-in-JS 比较
 
 CSS-in-JS 和实用工具/原子 CSS 有密切关系。这两种方法都提倡使用**标签**进行样式化。以某种方式试图模仿**内联样式**，这让它们有了很多相似的特性(比如在移动某些功能的时候更有信心)。
 
 [Christopher Chedeau](https://twitter.com/vjeux) 一直致力于推广 React 生态系统中 CSS-in-JS 理念。在很多次演讲中，他都解释了 CSS 的问题:
 
-![](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3d923a2dd76141a78242d0308e1d117a~tplv-k3u1fbpfcp-watermark.image)
+![](https://raw.githubusercontent.com/xcom1057136457/DrawingBed/main/3d923a2dd76141a78242d0308e1d117a%7Etplv-k3u1fbpfcp-watermark.image)
 
 1. 全局命名空间
 2. 依赖
@@ -194,8 +186,6 @@ CSS-in-JS 和实用工具/原子 CSS 有密切关系。这两种方法都提倡�
 实用工具/原子 CSS 也解决了其中的一些问题，但也确实没法解决所有问题（特别是样式的**非确定性解析**)。
 
 如果它们有很多相似之处，那我们能否同时使用它们呢?
-
-
 
 ## 探索原子 CSS-in-JS
 
@@ -234,7 +224,7 @@ React-Native-Web 的作者是 Nicolas Gallagher，他致力于开发 Twitter 移
 
 从那以后，很多公司都在用它(美国职业足球大联盟、Flipkart、Uber、纽约时报……)，但最重要的一次部署，则是由 Paul Armstrong 领导的团队在 2019 年推出的新的 Twitter 桌面应用。
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9f76238711cd46f7bbc27e27cb6e65b5~tplv-k3u1fbpfcp-watermark.image)
+![](https://raw.githubusercontent.com/xcom1057136457/DrawingBed/main/9f76238711cd46f7bbc27e27cb6e65b5%7Etplv-k3u1fbpfcp-watermark.image)
 
 ### Stylex
 
@@ -244,24 +234,20 @@ Stylex 是一个新的 CSS-in-JS 库，Facebook 团队为了 2020 年的 Faceboo
 
 我的所有信息都来自演讲 :)，还需要等待更多的细节。
 
-
-
 ## 可扩展性
 
 不出所料，在 Atomic CSS 的加成下，Twitter 和 Facebook 的 CSS**体积都大幅减少**了，现在它的**增长遵循的是对数曲线**。不过，简单的应用则会多了一些 **初始体积**。
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/35b528d6aa254a82a67b1ed7c57788ef~tplv-k3u1fbpfcp-watermark.image)
+![](https://raw.githubusercontent.com/xcom1057136457/DrawingBed/main/35b528d6aa254a82a67b1ed7c57788ef%7Etplv-k3u1fbpfcp-watermark.image)
 
-![](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b6ef346634f44d218c6900f99353299d~tplv-k3u1fbpfcp-watermark.image)
+![](https://raw.githubusercontent.com/xcom1057136457/DrawingBed/main/b6ef346634f44d218c6900f99353299d%7Etplv-k3u1fbpfcp-watermark.image)
 
 Facebook 分享了具体数字:
 
 - 旧的网站**仅仅首页**就用了 `413Kb` 的 CSS
 - 新的网站**整个站点**只用了 `74Kb`，包括暗黑模式
 
-![](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a7681df905c74ce2a28f188f8ddb1c20~tplv-k3u1fbpfcp-watermark.image)
-
-
+![](https://raw.githubusercontent.com/xcom1057136457/DrawingBed/main/a7681df905c74ce2a28f188f8ddb1c20%7Etplv-k3u1fbpfcp-watermark.image)
 
 ## 源码和输出
 
@@ -318,23 +304,21 @@ class E {
 
 可以看出，虽然标签上的**类名变多**了，但是 CSS 的输出体积会**随着功能的增多而减缓增长**，因为出现过一次的 CSS Rule 就不会再重复出现了。
 
-
-
 ## 生产环境验证
 
 我们看看 Twitter 上的标签是什么样子的:
 
-![](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1ad731068ec64116b879df2fce8696f8~tplv-k3u1fbpfcp-watermark.image)
+![](https://raw.githubusercontent.com/xcom1057136457/DrawingBed/main/1ad731068ec64116b879df2fce8696f8%7Etplv-k3u1fbpfcp-watermark.image)
 
 现在，让我们来看看新 Facebook:
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0ea33216ade1445ba7d075910333b4b0~tplv-k3u1fbpfcp-watermark.image)
+![](https://raw.githubusercontent.com/xcom1057136457/DrawingBed/main/0ea33216ade1445ba7d075910333b4b0%7Etplv-k3u1fbpfcp-watermark.image)
 
 很多人可能会被吓到，但是其实它很好用，而且保持了 [可访问性](https://github.com/necolas/react-native-web/blob/master/packages/docs/src/guides/accessibility.stories.mdx)。
 
 在 Chrome 里检查样式可能有点难，但 devtools 里就看得很清楚了:
 
-![](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9bfd4e96a8f546909d45b0322c690434~tplv-k3u1fbpfcp-watermark.image)
+![](https://raw.githubusercontent.com/xcom1057136457/DrawingBed/main/9bfd4e96a8f546909d45b0322c690434%7Etplv-k3u1fbpfcp-watermark.image)
 
 ## CSS 规则顺序
 
@@ -342,7 +326,7 @@ class E {
 
 在规则冲突的情况下，生效的不是标签上 class attribute 中的最后一个类，而是样式表中**最后插入**的规则。
 
-![](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/05aadd15366a4658b166c8e5dca7f57a~tplv-k3u1fbpfcp-watermark.image)
+![](https://raw.githubusercontent.com/xcom1057136457/DrawingBed/main/05aadd15366a4658b166c8e5dca7f57a%7Etplv-k3u1fbpfcp-watermark.image)
 
 以这张图为例，我们期望的是**书写在后**的 `blue` 类覆盖前面的类，但实际上 CSS 会以**样式表中的顺序**来决定优先级，最后我们看到的是红色的文字。
 
@@ -370,8 +354,6 @@ const styles = pseudoLib.create({
 如果一个类里有多个 CSS 规则，并且只有其中的一个 CSS 规则被覆盖，那么 CSS-in-JS 库没办法进行相关的过滤，这也是原子 CSS 的优势之一。
 
 如果一个类只有一个简单的 CSS 规则，如 `margin: 0`，而覆盖的是 `marginTop: 10`。像 `margin: 0` 这样的简写语法被扩展为 4 个不同的原子类，这个库就能更加轻松的过滤掉不该出现在 DOM 上的类名。
-
-
 
 ## 仍然喜欢 Tailwind？
 
@@ -418,8 +400,6 @@ import { t } from 'react-native-tailwindcss';
 ```
 
 就生产力的角度而言，并没有太大的不同。甚至可以用 TS 来避免错别字。
-
-
 
 ## 结论
 
