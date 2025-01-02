@@ -5,49 +5,56 @@ date: 2019-08-25 14:14:07
 ## transition和animation的区别
 
 1. transition必须要触发，一般使用hover
+
 2. transition不需要设置关键帧
 
 > 简单的过度效果使用transition, 复杂的动画使用animation
 
 ## 用法
 
-### transition-property：指定过渡属性
+### `transition-property`：指定过渡属性
 
 * 可以指定一个属性
+
 * 可以指定多个属性
+
 * 可以指定所有的属性（all）
 
-### transition-duration：过渡持续的时间
+### `transition-duration`：过渡持续的时间
 
-**可以指定秒、以及毫秒**
+可以指定秒、以及毫秒
 
-### transition-timing-function: 过渡的时间曲线，一般使用linear(线性曲线，平滑过渡)
+### `transition-timing-function`: 过渡的时间曲线，一般使用linear(线性曲线，平滑过渡)
 
-* linear: 规定以相同速度开始至结束的过渡效果
-* ease: 规定慢速开始，然后变快，然后慢速结束的过渡效果
-* ease-in: 规定以慢速开始的过渡效果
-* ease-out: 规定以慢速结束的过渡效果
-* ease-in-out: 规定以慢速开始和结束的过渡效果
+* `linear`: 规定以相同速度开始至结束的过渡效果
 
-### transition-delay: 过渡延迟
+* `ease`: 规定慢速开始，然后变快，然后慢速结束的过渡效果
 
-**可以指定秒、以及毫秒**
+* `ease-in`: 规定以慢速开始的过渡效果
 
-### 速写：transition:property duration timing delay;
+* `ease-out`: 规定以慢速结束的过渡效果
 
-## 关于transform
+* `ease-in-out`: 规定以慢速开始和结束的过渡效果
 
-### scale（图片变大的倍数）
+### `transition-delay`: 过渡延迟
 
-### skew（角度大小+deg）
+可以指定秒、以及毫秒
 
-### rotate（角度大小+deg）
+> 速写：`transition:property duration timing delay;`
 
-### translate（往坐标轴前进的距离+px）
+## 关于 `transform`
+
+* `scale`: 图片变大的倍数
+
+* `skew`: 角度大小 + deg
+
+* `rotate`: 角度大小 + deg
+
+* `translate`: 往坐标轴前进的距离 + px
 
 ## 举例代码
 
-``` html
+```` html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -93,7 +100,7 @@ date: 2019-08-25 14:14:07
 	</div>
 </body>
 </html>
-```
+````
 
 ## 代码图片以及效果
 
